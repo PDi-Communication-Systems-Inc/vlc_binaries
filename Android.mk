@@ -9,11 +9,10 @@
 			    libanw.14.so \
 			    libanw.18.so \
 			    libanw.21.so \
-			    libcompat.7.so \
 			    libiomx.10.so \
 			    libiomx.13.so \
 			    libiomx.14.so \
-			    libvlc.so \
+			    libjniloader.so \
 			    libvlcjni.so
   LOCAL_MODULE_CLASS := APPS
   LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
@@ -69,15 +68,6 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE := libcompat.7.so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH  := $(TARGET_OUT_SHARED_LIBRARIES)
-LOCAL_SRC_FILES := lib/$(LOCAL_MODULE)
-
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libiomx.10.so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_PATH  := $(TARGET_OUT_SHARED_LIBRARIES)
@@ -105,7 +95,7 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE := libvlc.so
+LOCAL_MODULE := libjniloader.so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_PATH  := $(TARGET_OUT_SHARED_LIBRARIES)
 LOCAL_SRC_FILES := lib/$(LOCAL_MODULE)
